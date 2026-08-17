@@ -1,0 +1,36 @@
+# dependencies
+node_modules/
+.pnpm-store/
+package-lock.json
+
+# build
+dist/
+build/
+*.tsbuildinfo
+
+# env
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# logs
+logs/
+*.log
+npm-debug.log*
+
+# editor
+.vscode/
+.idea/
+.claude
+# OS
+.DS_Store
+Thumbs.db
+
+# expo / mobile
+.expo/
+.expo-shared/
+web-build/
+
+# prisma
+apps/api/prisma/migrations/dev.db*

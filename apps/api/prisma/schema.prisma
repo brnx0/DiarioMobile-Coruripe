@@ -1,0 +1,30 @@
+// Schema introspectado parcialmente do banco legado EDU_LIVE_M5_DEV
+// IMPORTANTE: nao alterar via `prisma migrate` — DB e compartilhado com portal antigo.
+// Para sincronizar com mudancas externas: `prisma db pull`.
+
+generator client {
+  provider      = "prisma-client-js"
+  binaryTargets = ["native"]
+}
+
+datasource db {
+  provider = "sqlserver"
+  url      = env("DATABASE_URL")
+}
+
+/// Tabela legada de usuarios. Senha = MD5(USR_CODIGO || senha_plain).
+model FrUsuario {
+  USR_CODIGO            Int       @id
+  USR_LOGIN             String    @db.VarChar(20)
+  USR_SENHA             String?   @db.VarChar(64)
+  USR_ADMINISTRADOR     String    @db.Char(1)
+  USR_TIPO_EXPIRACAO    String    @db.Char(1)
+  USR_DIAS_EXPIRACAO    Int?
+  USR_NOME              String    @db.VarChar(60)
+  USR_EMAIL             String?   @db.VarChar(120)
+  USR_INICIO_EXPIRACAO  DateTime? @db.DateTime
+  ONLINE                String?   @db.VarChar(1)
+  PES_COD               Int?
+
+  @@map("FR_USUARIO")
+}

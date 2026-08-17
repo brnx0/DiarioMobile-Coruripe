@@ -1,0 +1,20 @@
+{
+  "name": "diario-monorepo",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "mobile": "corepack pnpm --filter @diariomobile/mobile",
+    "api": "corepack pnpm --filter @diariomobile/api",
+    "mobile:start": "corepack pnpm --filter @diariomobile/mobile start",
+    "api:dev": "corepack pnpm --filter @diariomobile/api dev",
+    "lint": "corepack pnpm -r lint",
+    "typecheck": "corepack pnpm -r typecheck"
+  },
+  "devDependencies": {
+    "typescript": "~5.9.2"
+  },
+  "packageManager": "pnpm@9.0.0",
+  "engines": {
+    "node": ">=20"
+  }
+}

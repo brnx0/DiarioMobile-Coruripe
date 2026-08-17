@@ -1,0 +1,55 @@
+{
+  "expo": {
+    "name": "Diario Mobile",
+    "slug": "diario-mobile",
+    "displayName": "Diário Mobile",
+    "version": "1.0.0",
+    "experiments": {
+      "tsconfigPaths": true
+    },
+    "plugins": [
+      "expo-secure-store",
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "usesCleartextTraffic": true
+          }
+        }
+      ]
+    ],
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/LogoMunicipio.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+    "icon": "./assets/icon.png",
+      "supportsTablet": true,
+      "bundleIdentifier": "com.breno.jesus.diariomobile",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false,
+        "NSFaceIDUsageDescription" : "$(PRODUCT_NAME) utiliza o Face ID para autenticar você com mais segurança."
+      }
+      
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.breno.jesus.diariomobile"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "a84b3800-f8e0-4fa8-93f1-41d9bf7fec26"
+      }
+    }
+  }
+}
