@@ -3,7 +3,7 @@
     "name": "Diario Mobile",
     "slug": "diario-mobile",
     "displayName": "Diário Mobile",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "experiments": {
       "tsconfigPaths": true
     },
@@ -30,21 +30,21 @@
       "**/*"
     ],
     "ios": {
-    "icon": "./assets/icon.png",
+      "icon": "./assets/icon.png",
       "supportsTablet": true,
-      "bundleIdentifier": "com.breno.jesus.diariomobile",
+      "bundleIdentifier": "com.diariomobile.coruripe",
       "infoPlist": {
         "ITSAppUsesNonExemptEncryption": false,
-        "NSFaceIDUsageDescription" : "$(PRODUCT_NAME) utiliza o Face ID para autenticar você com mais segurança."
+        "NSFaceIDUsageDescription": "$(PRODUCT_NAME) utiliza o Face ID para autenticar você com mais segurança."
       }
-      
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.breno.jesus.diariomobile"
+      "package": "com.diariomobile.coruripe",
+      "versionCode": 2
     },
     "extra": {
       "eas": {
